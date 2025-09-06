@@ -1,13 +1,11 @@
-# backend/render.yaml
 services:
   - type: web
     name: hr-avatar-backend
-    env: python  # ⚠️ ВАЖНО: python, не docker!
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.9.0
       - key: OPENAI_API_KEY
-        value: ваш_ключ_openai
+        sync: false
+      - key: ENVIRONMENT
+        value: production
