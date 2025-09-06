@@ -1,0 +1,4 @@
+Иван Иванов
+Python разработчик
+Опыт работы: 3 года
+Навыки: Python, Django, Flask, PostgreSQL
